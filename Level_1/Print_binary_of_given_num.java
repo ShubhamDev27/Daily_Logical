@@ -10,7 +10,6 @@ public class Print_binary_of_given_num {
 	   
 	   System.out.println("Enter num :");
 	    int num =sc.nextInt();
-	    int bin=0;
 	    while(num!=0) 
 	    {
 	    	  int digit = num%2;

@@ -36,7 +36,7 @@ public class Alternate_Positive_Negative {
            }
         }
         // Step 1: Partition negatives and positives
-        int neg = 0, pos = end;
+        int neg = 0, pos = end+1;
         // Step 2: Interleave negatives and positives
         while (neg < pos && pos < n && arr[neg] < 0) {
             int temp = arr[neg];

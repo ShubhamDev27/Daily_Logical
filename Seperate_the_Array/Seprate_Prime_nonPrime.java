@@ -14,24 +14,26 @@ public class Seprate_Prime_nonPrime {
 
     // Method to separate prime and non-prime numbers
     public static void separatePrimeNonPrime(int[] arr) {
-        int left = 0, right = arr.length - 1;
+        int start = 0, end = arr.length - 1;
 
-        while(left<right) 
+        while(start<end) 
         {
-        	  while(left<right && isPrime(arr[left]))
+        	  while(start<end && isPrime(arr[start]))
         	  {
-        		  left++;
+        		  start++;
         	  }
-        	  while(left<right && !isPrime(arr[right])) 
+        	  while(start<end && !isPrime(arr[end])) 
         	  {
-        		  right--;
+        		  end--;
         		  
         	  }
-        	  if(left<right) 
+        	  if(start<end) 
         	  {
-        		  int temp=arr[left];
-        		  arr[left]=arr[right];
-        		  arr[right]=temp;
+        		  int temp=arr[start];
+        		  arr[start]=arr[end];
+        		  arr[end]=temp;
+        		  start++;
+        		  end--;
         	  }
         }
         
